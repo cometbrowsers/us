@@ -1,1 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<stl_head>
+    <script language="JavaScript" type="text/javascript" src="<tag:jssource />"></script>
+    <title><tag:page_title /></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=<tag:charset />">
+    <tag:reset_css />
+    <style type="text/css">
+        *{margin:0;padding:0;box-sizing:border-box;font-family: <tagd:style name="keywords" value="Inter-Regular" type="font-family" />, Arial, sans-serif;}
+        header{width:100%;height:10px;background:#000}
+        .atf_section{display:flex;padding:82px 10px 61px;gap:88px;justify-content:center;background-image:url("<tag:image_path_new />/atf_background.png");background-repeat:no-repeat;background-size:contain;background-position:right top}
+        .atf_left_section span{max-width:80px;height:4px;width:100px;background:#371053;display:block;margin-bottom:25px}
+        .atf_left_section{max-width:459px;width:100%;position:relative}
+        .arrowStn{position:absolute;display:flex;top:-55px;right:15px}
+        .atf_right_section .arrowStn img{position:absolute;top:43.8px;left:-35px;z-index:1}
+        .atfCtaBtn img{animation:2s ease-in-out infinite svgZoom}
 
+        .arrowStn p{color:#0D8886;font-size:20px;font-style:italic;font-weight:700;line-height:32px}
+        .atfCtaBtn,.atf_left_section h3,.card p{color:#212529;font-style:normal}
+        .atf_left_section h3{font-size:44px;font-weight:600;line-height:60px;margin-bottom:32px}
+        .atf_left_section p{color:#545454;font-size:18px;font-style:normal;font-weight:400;line-height:32px}
+        .atfCtaBtn,.card p,.cardBtn a{font-weight:600}
+        .atf_right_section{max-width:724px;width:100%;display:flex;flex-direction:column;position:relative}
+        .atfCtaBtn,.btf_cards{justify-content:center;display:flex}
+        .atfMain{width:100%;border-radius:12px;border:6px solid rgba(187,187,187,.21);box-shadow:0 10px 12px 0 rgba(0,0,0,.17);backdrop-filter:blur(7.5px);margin-bottom:19px}
+        .atfCtaBtn{border-radius:12px;border:2px solid #0D8886;background:#0D8886;box-shadow:0 156px 44px 0 rgba(13,136,134,0.00),0 100px 40px 0 rgba(13,136,134,0.04),0 56px 34px 0 rgba(13,136,134,0.12),0 25px 25px 0 rgba(13,136,134,0.21),0 6px 14px 0 rgba(13,136,134,0.24);width:100%;padding:24px 20px;align-items:center;gap:16px;font-size:30px;line-height:40px;text-decoration:none;animation:6.5s linear infinite glare;color:#fff;transition:background 200ms ease,border-color 200ms ease}
+        .atfCtaBtn:hover{background:#104E4D;border:2px solid #104E4D}
+
+        .atfCtaBtn img,.cardBtn img{display:flex}
+        .btf_section{padding:56px 10px 80px;background:#f9f9f9}
+        .card,.line{background:#fff}
+        .btf_cards{align-items:center;gap:23.66px}
+        .card{max-width:411px;width:100%;border-radius:8px;box-shadow:0 15px 30px 0 rgba(0,0,0,.1)}
+        .cardImg{width:100%;height:276px}
+        .card p{font-size:20px;line-height:28px;text-transform:capitalize;margin-bottom:16px}
+        .btfHead span{color:#000;font-style:normal;line-height:normal}
+        .cardBtn a{color:#fff;font-style:normal;line-height:normal}
+        .cardBtn{padding:16px}
+        .cardBtn a{border-radius:4px;background:#0D8886;display:flex;height:50px;justify-content:center;align-items:center;gap:8px;align-self:stretch;text-align:center;font-size:20px;text-decoration:none;transition:background 200ms ease}
+        .cardBtn a:hover{background:#104E4D}
+        .btfHead{position:relative;margin-bottom:40px}
+        .line{position:absolute;height:1px;left:30px;right:30px;top:15px;z-index:1;background:linear-gradient(90deg,#fff 0,#acacac 30%,#acacac 70%,#fff 100%)}
+        .btfHead span,.txt-svg{background:#f9f9f9;z-index:2;position:relative}
+        .txt-svg{display:flex;max-width:270px;margin:0 auto;align-items:center;justify-content:center}
+        .btfHead span{font-size:24px;font-weight:700;padding-left:12px}
+        .image_section{position:relative}
+        .play-icon,.radar-effect,.rect{position:absolute}
+        .play-icon{left:50%;top:50%;transform:translate(-50%,-70%);z-index:999}
+        .radar-effect{border-radius:9999px;display:block;height:200px;left:50%;top:50%;transform:translate(-50%,-50%);width:200px}
+        .radar-effect .circles,.radar-effect .circles>div{height:100%;position:absolute;width:100%}
+        .radar-effect .circles>div{animation:1.5s ease-out infinite growAndFade;background-color:#0D8886CC;border-radius:50%;opacity:0}
+        .cardBtn img{animation:.75s ease-in-out infinite alternate move}
+        .rect{top:-82px;height:200px;overflow:hidden;right:0;width:600px}
+        @keyframes svgZoom {
+        0%,49%{transform:scale(1)}
+        100%,50%{transform:scale(1.08)}
+        }
+        @keyframes glare {
+        0%{background-position:100% 50%}
+        100%{background-position:0 50%}
+        }
+        @keyframes growAndFade {
+        0%{opacity:.5;transform:scale(0)}
+        100%{opacity:0;transform:scale(1)}
+        }
+        @keyframes move {
+        0%{transform:translateX(-2px)}
+        100%{transform:translateX(5px)}
+        }
+        @media (max-width:1200px) {
+        .btf_section{padding:56px 0}
+        .atf_right_section{max-width:640px}
+        .card img{height:unset}
+        .atfCtaBtn{font-size:24px}
+        .atfCtaBtn span img{height:30px;width:30px}
+        .card p br,.rect{display:none}
+        }
+        @media (max-width:1000px) {
+        .atf_section{flex-direction:column;align-items:center;background:unset}
+        .atf_left_section span{background:#0D8886}
+        .atf_left_section,.atf_right_section{max-width:unset}
+        .btf_cards{flex-direction:column}
+        .atf_left_section h3 br{display:none}
+        }
+        @media (max-width:600px) {
+        .atf_section{padding:20px 0 24px}
+        .atf_left_section span{max-width:64px}
+        .atf_left_section h3{font-size:24px;font-style:normal;font-weight:600;line-height:32px;margin-bottom:12px}
+        .atf_left_section p{color:#545454;font-size:16px;font-style:normal;font-weight:400;line-height:28px}
+        .atfCtaBtn,.btfHead span{line-height:normal;font-size:18px;font-style:normal;font-weight:600}
+        .atf_left_section,.atf_right_section{max-width:343px}
+        .atfCtaBtn{padding:16px;margin-top:24px;gap:8px;border-radius:12px;background:#0D8886;box-shadow:0 14px 30px 0 rgba(13,136,134,0.29)}
+        .atfCtaBtn span img{height:22px;width:22px}
+        .btf_section{background:#F2F2F2}
+        .btfHead span{padding:0 8px;background:#F2F2F2}
+        .txt-svg{max-width:190px;background:#F2F2F2}
+        .txt-svg img{width:20px;height:20px}
+        .line{left:0;right:0;top:10px}
+        .btf_cards{max-width:343px;width:100%;margin:0 auto}
+        .btfHead{margin-bottom:24px}
+        .card p{font-size:18px;font-style:normal;font-weight:600;line-height:24px;text-transform:capitalize;max-width:303px}
+        .cardBtn a{font-size:18px;font-style:normal;font-weight:600;line-height:normal}
+        .btf_section{padding:32px 0}
+        .arrowStn p{font-size:16px;font-style:italic;font-weight:700;line-height:normal}
+        .atf_section{gap:32px}
+        .arrowStn{top:-25px;right:4px}
+        .atf_right_section .arrowStn img{top:unset;left:unset;bottom:-43px;right:50px;width:38.157px;height:40.451px}
+        .play-icon img{width:50px;height:50px}
+        }
+        </style>
+</stl_head>
+<stl_body>
+<tag:post_form_html />
+<div class="wrapper">
+    <div class="main-wrap">
+        <header></header>
+        <div class="main_container">
+            <div class="atf_section">
+                <div class="atf_left_section">
+                    <span></span>
+                    <h3>"Students: Get Early Access to Comet" <br> and "Your Free AI Study Buddy!".</h3>
+                    <p>Struggling to keep up with studies? Meet Comet, the AI-powered browser that acts like your personal tutor, study buddy, and 24/7 sidekick—all in one. </p>
+                </div>
+                <div class="atf_right_section">
+                    <div class="arrowStn">
+                        <img src="<tag:image_path_new />/arrowIcon.svg" class="" srcset="">
+                        <p>VIRAL VIDEO</p>
+                    </div>
+                    <a class="image_section"
+                       onclick="ctrk('record', 'Image Video', { dnt: false, payout: 0 })"
+                       href="https://d2a85ookn1p5lr663g2si2zr4c.hop.clickbank.net/?&traffic_type=paid&tid={ClickId}"
+                       target="_blank"
+                        >
+                        <div class="play-icon">
+                            <div class="radar-effect">
+                                <div class="circles">
+                                    <div class="circle1"></div>
+                                    <div class="circle2"></div>
+                                    <div class="circle3"></div>
+                                </div>
+                            </div>
+                            <img src="<tag:image_path_new />/imgPlay.svg" alt="" srcset="">
+                        </div>
+                        <img src="<tag:image_path_new />/atf_image.png" alt="" srcset="" class="atfMain">
+                    </a>
+                    <a href="" class="atfCtaBtn"
+                    onclick="ctrk('record', 'Watch Video Presentation', { dnt: false, payout: 0 })"
+                    href="https://d2a85ookn1p5lr663g2si2zr4c.hop.clickbank.net/?&traffic_type=paid&tid={ClickId}"
+                    target="_blank"
+                    > DOWNLOAD COMET <span>
+                            <img src="<tag:image_path_new />/btnPlay.svg" alt="" srcset="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="btf_section">
+                <div class="btfHead">
+                    <div class="line"></div>
+                    <div class="txt-svg">
+                        <img src="<tag:image_path_new />/trendingIcon.svg" alt="" srcset="">
+                        <span>AI-powered</span>
+                    </div>
+                </div>
+                <div class="btf_cards">
+                    <div class="card">
+                        <div class="cardBtn">
+                            <p>Turn on Study Mode for step-by-step instruction and deeper understanding beyond</p>
+                            <a href="#" class="btfCtaBtn"
+                                onclick="ctrk('record', 'Read More', { dnt: false, payout: 0 })"
+                                href="https://d2a85ookn1p5lr663g2si2zr4c.hop.clickbank.net/?&traffic_type=paid&tid={ClickId}"
+                                target="_blank"
+                                > Download Now
+                                <span><img src="<tag:image_path_new />/cardArrow.svg" alt=""></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardBtn">
+                            <p>Upload study materials or mention a Comet tab. Perplexity will auto-generate interactive flashcards and quizzes from your notes.</p>
+                            <a href="#" class="btfCtaBtn"
+                                onclick="ctrk('record', 'Read More', { dnt: false, payout: 0 })"
+                                href="https://d2a85ookn1p5lr663g2si2zr4c.hop.clickbank.net/?&traffic_type=paid&tid={ClickId}"
+                                target="_blank"
+                                > Download Now
+                                <span><img src="<tag:image_path_new />/cardArrow.svg" alt=""></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardBtn">
+                            <p>Chat with any webpage. No switching apps, no copy-paste.</p>
+                            <a href="#" class="btfCtaBtn"
+                                onclick="ctrk('record', 'Read More', { dnt: false, payout: 0 })"
+                                href="https://d2a85ookn1p5lr663g2si2zr4c.hop.clickbank.net/?&traffic_type=paid&tid={ClickId}"
+                                target="_blank"
+                                > Download Now
+                                <span><img src="<tag:image_path_new />/cardArrow.svg" alt=""></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    !function(a, b, c, d, e, f, g)
+    {if(a.ctrk)return;e=a.ctrk=function(){e.runner?
+    e.runner.apply(e,arguments):e.q.push(arguments)};
+    e.q=[];f=b.createElement(c);f.async=true;
+    f.src=d+'?d='+a.location.hostname;g=b.getElementsByTagName(c)[0];
+    g.parentNode.insertBefore(f,g);}
+    (window, document,'script','https://c.pm-srv.co/v1/analytics.js');
+    ctrk('boot', '27f03326-aaea-4bdf-bdc6-7a744b7bdf24');
+    ctrk('record', 'page-land', {dnt: false})
+ </script>
+<!-- <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "mr8igo07j1");
+</script> -->
+</stl_body>
+</html>
